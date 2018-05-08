@@ -7,17 +7,27 @@ div{
     text-align: center;
 }
 
-.iPad, .watch, .macbook, .airpods, .iPhone{
+.one-column, .two-column{
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     background-position: center bottom;
-    height: 550px;
+}
+
+.two-column::after {
+    content: "";
+    display: block;
+    padding-top: 90%;
+}
+
+.one-column::after{
+    content: "";
+    display: block;
+    padding-top: 40%;
 }
 
 .iPad{
     background-color: #F5F5F5;
     background-image: url("images/ipad_large.jpg");
-    
 }
 
 .watch{
@@ -33,7 +43,6 @@ div{
 .airpods{
     background-color: #FAFAFA;
     background-image: url("images/airpods_large.jpg");
-    background-position: center center;
 }
 
 .iPhone{
