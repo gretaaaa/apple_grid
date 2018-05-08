@@ -7,6 +7,13 @@ div{
     text-align: center;
 }
 
+.iPad, .watch, .macbook, .airpods, .iPhone{
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center bottom;
+    height: 550px;
+}
+
 .iPad{
     background-color: #F5F5F5;
     background-image: url("images/ipad_large.jpg");
@@ -26,6 +33,7 @@ div{
 .airpods{
     background-color: #FAFAFA;
     background-image: url("images/airpods_large.jpg");
+    background-position: center center;
 }
 
 .iPhone{
@@ -34,12 +42,6 @@ div{
     color: white;
 }
 
-.iPad, .watch, .macbook, .airpods, .iPhone{
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center bottom;
-    height: 550px;
-}
 
 
 
