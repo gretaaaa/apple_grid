@@ -1,0 +1,49 @@
+body{
+    color: black;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+div{
+    text-align: center;
+}
+
+.iPad{
+    background-color: #F5F5F5;
+    background-image: url("images/ipad_large.jpg");
+    
+}
+
+.watch{
+    background-color: #EEEEEE;
+    background-image: url("images/watch_series_3_large.jpg");
+}
+
+.macbook{
+    background-color: #FAFAFA;
+    background-image: url("images/macbook_pro_large.jpg");
+}
+
+.airpods{
+    background-color: #FAFAFA;
+    background-image: url("images/airpods_large.jpg");
+}
+
+.iPhone{
+    background-color: #498393;
+    background-image: url("images/iphone_switch_large.png");
+    color: white;
+}
+
+.iPad, .watch, .macbook, .airpods, .iPhone{
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center bottom;
+    height: 550px;
+}
+
+
+
+
+
+
+
