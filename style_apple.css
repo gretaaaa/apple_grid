@@ -79,8 +79,18 @@ div.row:first-child div[class*="column"] div{
     color: white;
 }
 
-img{
-    margin-bottom: 7px;
+.apple-grid img{
+    margin-bottom: 8px;
+    padding-top: 30px;
+}
+
+.apple-grid h1{
+    font-size: 40px;
+    padding-top: 30px;
+}
+
+.apple-grid h5{
+    font-size: 21px;
 }
 
 @media screen and (max-width: 768px){
@@ -88,5 +98,28 @@ img{
     div.two-column:nth-child(even) div {
         margin-right: 0;
         margin-left: 0;
+    }
+
+    .apple-grid h1{
+        font-size: 32px;
+        padding-top: 22px;
+    }
+
+    .apple-grid h5{
+        font-size: 19px;
+    }
+
+    .apple-grid img{
+        padding-top: 22px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .apple-grid h1{
+        font-size: 32px;
+    }
+
+    .apple-grid h5{
+        font-size: 19px;
     }
 }
