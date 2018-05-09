@@ -12,7 +12,7 @@ div{
     padding-right: 0px;
 }
 
-.one-column, .two-column{
+.two-column div{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;
@@ -22,51 +22,67 @@ div{
     margin-right: 6px;
 }
 
-.two-column::after {
+ /*RIPETIZIONE VEDI COME SISTEMARE*/
+.one-column div{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.two-column div::after {
     content: "";
     display: block;
     padding-top: 90%;
 }
 
-.one-column::after{
+.one-column div::after{
     content: "";
     display: block;
     padding-top: 40%;
 }
 
+div.two-column:first-child div{
+    margin-left: 12px;
+}
+
+div.two-column:last-child div{
+    margin-right: 12px;
+}
+
+div.row:first-child div[class*="column"] div{
+    margin-top: 12px;
+}
+
+div.row:last-child div[class*="column"] div{
+    margin-bottom: 12px;
+}
+
 .iPad{
     background-color: #F5F5F5;
     background-image: url("images/ipad_large.jpg");
-    margin-top: 12px;
-    margin-left: 0px;
-    margin-right: 0px;
 }
 
 .watch{
     background-color: #EEEEEE;
     background-image: url("images/watch_series_3_large.jpg");
-    margin-left: 12px;
 }
 
 .macbook{
     background-color: #FAFAFA;
     background-image: url("images/macbook_pro_large.jpg");
-    margin-right: 12px;
 }
 
 .airpods{
     background-color: #FAFAFA;
     background-image: url("images/airpods_large.jpg");
-    margin-bottom: 12px;
-    margin-left: 12px;
 }
 
 .iPhone{
     background-color: #498393;
     background-image: url("images/iphone_switch_large.png");
     color: white;
-    margin-bottom: 12px;
-    margin-right: 12px;
 }
 
 img{
