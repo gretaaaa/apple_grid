@@ -7,10 +7,19 @@ div{
     text-align: center;
 }
 
+.no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .one-column, .two-column{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .two-column::after {
@@ -28,27 +37,40 @@ div{
 .iPad{
     background-color: #F5F5F5;
     background-image: url("images/ipad_large.jpg");
+    margin-top: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .watch{
     background-color: #EEEEEE;
     background-image: url("images/watch_series_3_large.jpg");
+    margin-left: 12px;
 }
 
 .macbook{
     background-color: #FAFAFA;
     background-image: url("images/macbook_pro_large.jpg");
+    margin-right: 12px;
 }
 
 .airpods{
     background-color: #FAFAFA;
     background-image: url("images/airpods_large.jpg");
+    margin-bottom: 12px;
+    margin-left: 12px;
 }
 
 .iPhone{
     background-color: #498393;
     background-image: url("images/iphone_switch_large.png");
     color: white;
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
+
+img{
+    margin-bottom: 7px;
 }
 
 
