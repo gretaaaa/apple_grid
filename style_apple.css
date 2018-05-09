@@ -83,10 +83,10 @@ img{
     margin-bottom: 7px;
 }
 
-
-
-
-
-
-
-
+@media screen and (max-width: 768px){
+    div.two-column:nth-child(odd) div,
+    div.two-column:nth-child(even) div {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
