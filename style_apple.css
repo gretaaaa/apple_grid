@@ -16,8 +16,7 @@ div{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     margin-left: 6px;
     margin-right: 6px;
 }
@@ -27,8 +26,7 @@ div{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .two-column div::after {
@@ -43,20 +41,16 @@ div{
     padding-top: 40%;
 }
 
-div.two-column:first-child div{
+div.two-column:nth-child(odd) div{
     margin-left: 12px;
 }
 
-div.two-column:last-child div{
+div.two-column:nth-child(even) div{
     margin-right: 12px;
 }
 
 div.row:first-child div[class*="column"] div{
     margin-top: 12px;
-}
-
-div.row:last-child div[class*="column"] div{
-    margin-bottom: 12px;
 }
 
 .iPad{
