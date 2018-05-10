@@ -91,7 +91,7 @@ div.row:first-child div[class*="column"] div{
 }
 
 .iPhone{
-    background-color: #498393; 
+    background: linear-gradient(to bottom, #498393 0%, #498393 10%, #98d8e8 100%);
     color: white;
 }
 
