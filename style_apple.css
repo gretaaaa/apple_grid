@@ -34,6 +34,26 @@ div.row:first-child div[class*="column"] div{
     margin-top: 12px;
 }
 
+.color-light-grey{
+    background-color: #F5F5F5;
+}
+
+.color-grey{
+    background-color: #EEEEEE;
+}
+
+.color-cream{
+    background-color: #FAFAFA;
+}
+
+.color-blue{
+    background: linear-gradient(to bottom, #498393 0%, #498393 10%, #98d8e8 100%);
+}
+
+.text-white{
+    color: white;
+}
+
 .image-column-background{
     background-repeat: no-repeat;
     background-size: contain;
@@ -54,41 +74,20 @@ div.row:first-child div[class*="column"] div{
     background-image: url("images/ipad_large.jpg");
 }
 
-.iPad{
-    background-color: #F5F5F5;
-}
-
 .watch .image-column-background{
     background-image: url("images/watch_series_3_large.jpg");
-}
-
-.watch{
-    background-color: #EEEEEE;
 }
 
 .macbook .image-column-background{
     background-image: url("images/macbook_pro_large.jpg");
 }
 
-.macbook{
-    background-color: #FAFAFA;
-}
-
 .airpods .image-column-background{
     background-image: url("images/airpods_large.jpg");
 }
 
-.airpods{
-    background-color: #FAFAFA;
-}
-
 .iPhone .image-column-background{
     background-image: url("images/iphone_switch_large.png");
-}
-
-.iPhone{
-    background: linear-gradient(to bottom, #498393 0%, #498393 10%, #98d8e8 100%);
-    color: white;
 }
 
 .apple-grid img{
