@@ -91,6 +91,8 @@ div.row:first-child div[class*="column"] div{
 
 .apple-grid h5{
     font-size: 21px;
+    padding-top: 4px;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px){
@@ -107,6 +109,13 @@ div.row:first-child div[class*="column"] div{
 
     .apple-grid h5{
         font-size: 19px;
+        padding-top: 3px;
+    }
+
+    .iPad h5{
+        width: 180px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .apple-grid img{
