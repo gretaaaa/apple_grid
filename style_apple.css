@@ -36,22 +36,18 @@ div.row:first-child div[class*="column"] div{
 
 .image-column-background{
     background-repeat: no-repeat;
-    background-size: 500px;
+    background-size: contain;
     background-position: center bottom;
-}
-
-.one-column .image-column-background{
-    background-size: 1000px;
 }
 
 .image-column-background::after{
     content: "";
     display: block;
-    padding-top: 460px;
+    padding-top: 90%;
 }
 
 .one-column .image-column-background::after{
-    padding-top: 370px;
+    padding-top: 40%;
 }
 
 .iPad .image-column-background{
@@ -111,24 +107,6 @@ div.row:first-child div[class*="column"] div{
     width: 100%;
 }
 
-@media screen and (max-width: 1115px){
-    .image-column-background{
-        background-size: 340px;
-    }
-
-    .image-column-background::after{
-        padding-top: 330px;
-    }
-    
-    .one-column .image-column-background{
-        background-size: 800px;
-    }
-
-    .one-column .image-column-background::after{
-        padding-top: 300px;
-    }
-}
-
 @media screen and (max-width: 768px){
     div.two-column:nth-child(odd) div,
     div.two-column:nth-child(even) div {
@@ -154,39 +132,5 @@ div.row:first-child div[class*="column"] div{
 
     .apple-grid img{
         padding-top: 22px;
-    }
-
-    .image-column-background{
-        background-size: 290px;
-    }
-
-    .image-column-background::after{
-        padding-top: 300px;
-    }
-
-    .one-column .image-column-background{
-        background-size: 550px;
-    }
-
-    .one-column .image-column-background::after{
-        padding-top: 210px;
-    }
-}
-
-@media screen and (max-width: 580px){
-    .apple-grid h1{
-        font-size: 32px;
-    }
-
-    .apple-grid h5{
-        font-size: 19px;
-    }
-
-    .one-column .image-column-background{
-        background-size: 300px;
-    }
-
-    .one-column .image-column-background::after{
-        padding-top: 120px;
     }
 }
