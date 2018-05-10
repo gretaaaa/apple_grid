@@ -22,19 +22,6 @@ body{
     margin-bottom: 12px;
 }
 
-/*
-.two-column div::after {
-    content: "";
-    display: block;
-    padding-top: 90%;
-}
-
-.one-column div::after{
-    content: "";
-    display: block;
-    padding-top: 40%;
-}*/
-
 div.two-column:nth-child(odd) div{
     margin-left: 12px;
 }
