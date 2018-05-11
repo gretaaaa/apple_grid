@@ -12,10 +12,11 @@
     padding-right: 0px;
 }
 
-.two-column div{
+.two-column > div{
     margin-bottom: 12px;
     margin-left: 6px;
     margin-right: 6px;
+    min-height: 100%;
 }
 
 .one-column div{
@@ -132,4 +133,10 @@ div.row:first-child div[class*="column"] div{
     .apple-grid img{
         padding-top: 22px;
     }
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
