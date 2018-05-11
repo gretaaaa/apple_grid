@@ -12,27 +12,30 @@
     padding-right: 0px;
 }
 
+.no-gutters > .two-column{
+    padding-bottom: 12px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
 .two-column > div{
-    margin-bottom: 12px;
-    margin-left: 6px;
-    margin-right: 6px;
     min-height: 100%;
 }
 
-.one-column div{
-    margin-bottom: 12px;
+.one-column{
+    padding-bottom: 12px;
 }
 
-div.two-column:nth-child(odd) div{
-    margin-left: 12px;
+div.two-column:nth-child(odd){
+    padding-left: 12px;
 }
 
-div.two-column:nth-child(even) div{
-    margin-right: 12px;
+div.two-column:nth-child(even){
+    padding-right: 12px;
 }
 
-div.row:first-child div[class*="column"] div{
-    margin-top: 12px;
+div.row:first-child div[class*="column"]{
+    padding-top: 12px;
 }
 
 .color-light-grey{
@@ -108,10 +111,10 @@ div.row:first-child div[class*="column"] div{
 }
 
 @media screen and (max-width: 768px){
-    div.two-column:nth-child(odd) div,
-    div.two-column:nth-child(even) div {
-        margin-right: 0;
-        margin-left: 0;
+    div.two-column:nth-child(odd),
+    div.two-column:nth-child(even){
+        padding-right: 0;
+        padding-left: 0;
     }
 
     .apple-grid h1{
