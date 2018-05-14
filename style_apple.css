@@ -58,6 +58,14 @@ div.row:first-child div[class*="column"]{
     color: white;
 }
 
+.text-column{
+    min-height: 130px;
+}
+
+h1, h5{
+    margin: 0;
+}
+
 .image-column-background{
     background-repeat: no-repeat;
     background-size: contain;
