@@ -1,79 +1,81 @@
-<div class="setting-text">
-    <div class="container-fluid no-padding">
-        <div class="apple-grid">
-            <div class="row no-gutters">
-                <#if title.getSiblings()?has_content>
-                	<#list title.getSiblings() as cur_title>
-                        <#if (cur_title.linkToPage.getFriendlyUrl())?has_content>
-                            <#assign link_page = cur_title.linkToPage.getFriendlyUrl() />
-                        <#else>
-                            <#assign link_page = "" />
-                        </#if>
+<div class="fluid-container">
+    <div class="apple-grid">
+        <div class="row flex-container">
+            <#if title.getSiblings()?has_content>
+                <#list title.getSiblings() as cur_title>
+                    <#if (cur_title.linkToPage.getFriendlyUrl())?has_content>
+                        <#assign link_page = cur_title.linkToPage.getFriendlyUrl() />
+                    <#else>
+                        <#assign link_page = "" />
+                    </#if>
                         
+                    <div 
+                        class="
+                        <#if cur_title.selectDimension.getData() == 'one-column'>
+                            col-sx-12 col-md-12 one-column 
+                        <#else>
+                            col-sx-12 col-md-6 two-column
+                        </#if>"
+                    >
                         <div 
-                            class="
-                            <#if cur_title.selectDimension.getData() == 'one-column'>
-                                col-sx-12 col-md-12 one-column 
+                            class="${cur_title.selectColor.getData()}
+                            <#if (cur_title.textWhite.getData())?has_content>
+                                <#assign text_white = true />
                             <#else>
-                                col-sx-12 col-md-6 two-column
+                                <#assign text_white = false />
+                            </#if>
+                            <#if text_white>
+                                text-white
                             </#if>"
                         >
-                            <div 
-                                class="${cur_title.selectColor.getData()}
-                                <#if (cur_title.textWhite.getData())?has_content>
-                                    <#assign text_white = true />
-                                <#else>
-                                    <#assign text_white = false />
-                                </#if>
-                                <#if text_white>
-                                    text-white
-                                </#if>"
-                            >
                             
-                                <div class="text-colum">
-                                    <h1>
-                                        <a href="${link_page}">
-                                            <#if (cur_title.getData())?has_content>
-                                                ${cur_title.getData()}
-                                            <#else>
-                                                <#if (cur_title.imageTitle.getData())?has_content>
-                                                    <img src="${cur_title.imageTitle.getData()}" alt="">
-                                                </#if>
+                            <div class="text-column">
+                                <h1>
+                                    <a href="${link_page}">
+                                        <#if (cur_title.getData())?has_content>
+                                            ${cur_title.getData()}
+                                        <#else>
+                                            <#if (cur_title.imageTitle.getData())?has_content>
+                                                <img src="${cur_title.imageTitle.getData()}" alt="">
                                             </#if>
+                                        </#if>
+                                    </a>
+                                </h1>
+                                <#if (cur_title.subtitle.getData())?has_content>
+                                    <h5>
+                                        <a href="${link_page}">
+                                            ${cur_title.subtitle.getData()}
                                         </a>
-                                    </h1>
-                                    <#if (cur_title.subtitle.getData())?has_content>
-                                        <h5>
-                                            <a href="${link_page}">
-                                                ${cur_title.subtitle.getData()}
-                                            </a>
-                                        </h5>
-                                    </#if>
-                                </div>
-                                <#if (cur_title.image.getData())?has_content>
-                                    <#assign url_image = cur_title.image.getData() />
+                                    </h5>
                                 </#if>
-                                <div 
-                                    class="image-column-background" 
-                                    style="background-image: url('${url_image}');"
-                                >
-                                    <a href="${link_page}"></a>
-                                </div>
+                            </div>
+                            <#if (cur_title.image.getData())?has_content>
+                                <#assign url_image = cur_title.image.getData() />
+                            <#else>
+                                <#assign url_image = "" />
+                            </#if>
+                            <div 
+                                class="image-column-background" 
+                                style="background-image: url('${url_image}');"
+                            >
+                                <a href="${link_page}"></a>
                             </div>
                         </div>
-                	</#list>
-                </#if>
-            </div>
+                    </div>
+                </#list>
+            </#if>
         </div>
     </div>
 </div>
 
 <style>
-    .settings-text{
-        color: black;
-        font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    #_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_h0diClqJ2kHI_kldx_column1_0_menu{
+        position: absolute;
+        right: 1px;
+        z-index: 1;
     }
-                        
+
+    
     a,
     a:hover{
         color: black;
@@ -82,39 +84,38 @@
                         
     .apple-grid{
         text-align: center;
+        padding-top: 12px;
+        color: black;
+        font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     }
-                        
-    .no-padding{
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-                        
-    .no-gutters > .two-column{
+    
+    .one-column,
+    .two-column{
         padding-bottom: 12px;
-        padding-left: 6px;
-        padding-right: 6px;
+    }
+    
+    .two-column{
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    
+    div.two-column + div.two-column{
+        padding-left: 0;
+    }
+    
+    #content .row{
+        margin: 0;
+    }
+    
+    .one-column{
+        padding-left: 0;
+        padding-right: 0;
     }
                             
     .two-column > div{
         min-height: 100%;
     }
-                        
-    .one-column{
-        padding-bottom: 12px;
-    }
-                        
-    div.two-column:nth-child(odd){
-        padding-left: 12px;
-    }
-                        
-    div.two-column:nth-child(even){
-        padding-right: 12px;
-    }
-                        
-    div.row:first-child div[class*="column"]{
-        padding-top: 12px;
-    }
-                        
+    
     .color-light-grey{
         background-color: #F5F5F5;
     }
@@ -142,11 +143,9 @@
     }
                         
     .text-column{
-        min-height: 130px;
-    }
-                        
-    h1, h5{
-        margin: 0;
+        min-height: 182px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
                         
     .image-column-background{
@@ -163,6 +162,10 @@
                         
     .one-column .image-column-background::after{
         padding-top: 40%;
+    }
+    
+    h1, h5{
+        margin: 0;
     }
 
     .apple-grid h1{
@@ -182,11 +185,11 @@
     }
                         
     @media screen and (max-width: 991px){
-        div.two-column:nth-child(odd),
-        div.two-column:nth-child(even),
+        div.two-column,
         div.one-column{
             padding-right: 0;
             padding-left: 0;
+            width: 100%;
         }
                         
         .apple-grid h1{

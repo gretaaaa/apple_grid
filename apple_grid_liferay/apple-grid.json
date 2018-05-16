@@ -94,7 +94,7 @@
                     "name": "image",
                     "readOnly": false,
                     "repeatable": false,
-                    "required": true,
+                    "required": false,
                     "showLabel": true,
                     "type": "ddm-image"
                 },
@@ -192,7 +192,7 @@
                     "name": "selectDimension",
                     "readOnly": false,
                     "repeatable": false,
-                    "required": true,
+                    "required": false,
                     "showLabel": true,
                     "type": "select"
                 },
